@@ -35,14 +35,14 @@ Wechaty.instance({
         if (dice100 > 75 && dice100 < 100) text = ' 🌚 🌚 🌚'
         console.log(dice100)
         console.log(text);
-        // message.say()        
+        message.say(text);
       }
     }
   })
-  .on('friend', async function (contact, request) {
-    if (request) {
-      await request.accept()
-      await contact.say('halo 这里是康康酱 :3 请随意~')
-    }
-  })
+  // .on('friend', async function (contact, request) {
+  //   if (request) {
+  //     await request.accept()
+  //     await contact.say('halo 这里是康康酱 :3 请随意~')
+  //   }
+  // })
   .init()
