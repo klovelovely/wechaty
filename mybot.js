@@ -33,7 +33,7 @@ Wechaty.instance({
     const fromContact = message.from()
     const fromContent = message.content()
     debugger
-    if (!message.self() && /ruobing|大家爱我|丁鸽/.test(fromContact.obj.name)) {
+    if (!message.self() && /ruobing|大家爱我|丁/.test(fromContact.obj.name)) {
       if (/\d|康|我|你|他|这|哇|啊|呀|吼|惹|肥/.test(fromContent)) {
         var dice100 = Math.round(Math.random() * 100);
         var text = ':3';
