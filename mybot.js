@@ -2,13 +2,21 @@ const {
   Wechaty,
   Message
 } = require('wechaty')
+const QrcodeTerminal = require('qrcode-terminal')
 
 global.threshold = 500;
 
 Wechaty.instance({
     profile: 'kangkang'
   })
-  .on('scan', (url, code) => console.log(`Scan QR Code to login: ${code}\n${url}`))
+  // .on('scan', (url, code) => console.log(`Scan QR Code to login: ${code}\n${url}`))
+  .on('scan', (url, code) => {
+    if (!/201|200/.test(String(code))) {
+      const loginUrl = url.replace(/\/qrcode\//, '/l/')
+      QrcodeTerminal.generate(loginUrl)
+    }
+    console.log(`${url}\n[${code}] Scan QR Code in above url to login: `)
+  })
   .on('login', user => console.log(`User ${user} logined`))
   .on('message', message => {
 
