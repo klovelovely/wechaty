@@ -1,0 +1,24 @@
+{
+  "name": "halo-wechaty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mybot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klovelovely/wechaty.git"
+  },
+  "keywords": [],
+  "author": "Kavalon <klovelovely@live.com> (http://mar.moe)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klovelovely/wechaty/issues"
+  },
+  "homepage": "https://github.com/klovelovely/wechaty#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.11.0",
+    "wechaty": "^0.8.116"
+  }
+}
